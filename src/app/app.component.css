@@ -1,6 +1,11 @@
-.col {
-    background-color: orange;
+.number {
     margin: 1px;
-    font-size: 5rem;
+    font-size: 3rem;
     color: white;
+}
+.number.mega {
+    background-color: red;
+}
+.number.power {
+    background-color: blue;
 }
