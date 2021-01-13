@@ -28,14 +28,14 @@ export class AppComponent {
 
         this.ran = [];
         if (this.max) {
-            this.extra = Math.floor(Math.random() * this.maxExtra) + 1; 
+            this.extra = Math.floor(Math.random() * this.maxExtra) + 1;
             do {
-                let randomNumber = Math.floor(Math.random() * this.max) + 1; 
+                let randomNumber = Math.floor(Math.random() * this.max) + 1;
                 if (this.ran.indexOf(randomNumber)===-1) {
                     this.ran.push(randomNumber);
                 }
             } while (this.ran.length<5);
-    
+
             this.ran = this.ran.sort((a:Number, b:Number) => {
                 if (a>b) return 1;
                 else if (b>a) return -1;
