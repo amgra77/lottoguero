@@ -23,6 +23,10 @@ export class AppComponent {
                 this.max = 69;
                 this.maxExtra = 26;
                 break;
+            case 'texastwostep':
+                this.max = 35;
+                this.maxExtra = 35;
+                break;
             default: this.max = NaN;
         }
 
@@ -34,14 +38,13 @@ export class AppComponent {
                 if (this.ran.indexOf(randomNumber)===-1) {
                     this.ran.push(randomNumber);
                 }
-            } while (this.ran.length<5);
+            } while (this.ran.length<(this.lastSelection === 'texastwostep' ? 4 : 5));
 
             this.ran = this.ran.sort((a:Number, b:Number) => {
                 if (a>b) return 1;
                 else if (b>a) return -1;
                 else return 0;
             });
-            console.log('this.ran ', this.ran);
         }
 
 

@@ -1,22 +1,25 @@
 <div class="container center">
     <div class="center">
         <div class="row" style="margin-top: 1rem;">
-            <div class="col s6">
+            <div class="col">
                 <button type="button" class="btn blue darken-1" (click)="makeNumbers('power')">Power (69)</button>
             </div>
-            <div class="col s6">
+            <div class="col">
                 <button type="button" class="btn red darken-1" (click)="makeNumbers('mega')">Mega (70)</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn green darken-1" (click)="makeNumbers('texastwostep')">Texas 2 step (35)</button>
             </div>
         </div>
         <div class="row" *ngIf="ran.length">
-            <div class="col s12 m2 center number offset-m1" [ngClass]="{'red':lastSelection=='mega', 'blue':lastSelection=='power'}">{{ran[0]}}</div>
-            <div class="col s12 m2 center number" [ngClass]="{'red':lastSelection=='mega', 'blue':lastSelection=='power'}">{{ran[1]}}</div>
-            <div class="col s12 m2 center number" [ngClass]="{'red':lastSelection=='mega', 'blue':lastSelection=='power'}">{{ran[2]}}</div>
-            <div class="col s12 m2 center number" [ngClass]="{'red':lastSelection=='mega', 'blue':lastSelection=='power'}">{{ran[3]}}</div>
-            <div class="col s12 m2 center number" [ngClass]="{'red':lastSelection=='mega', 'blue':lastSelection=='power'}">{{ran[4]}}</div>
+            <div class="col s12 m1 number" [ngClass]="{'red':lastSelection=='mega', 'blue':lastSelection=='power', 'green': lastSelection=='texastwostep'}">{{ran[0]}}</div>
+            <div class="col s12 m1 number" [ngClass]="{'red':lastSelection=='mega', 'blue':lastSelection=='power', 'green': lastSelection=='texastwostep'}">{{ran[1]}}</div>
+            <div class="col s12 m1 number" [ngClass]="{'red':lastSelection=='mega', 'blue':lastSelection=='power', 'green': lastSelection=='texastwostep'}">{{ran[2]}}</div>
+            <div class="col s12 m1 number" [ngClass]="{'red':lastSelection=='mega', 'blue':lastSelection=='power', 'green': lastSelection=='texastwostep'}">{{ran[3]}}</div>
+            <div class="col s12 m1 number" [ngClass]="{'red':lastSelection=='mega', 'blue':lastSelection=='power', 'green': lastSelection=='texastwostep'}" *ngIf="lastSelection!='texastwostep'">{{ran[4]}}</div>
         </div>
         <div class="row" *ngIf="extra">
-            <div class="col s12 m2 center number offset-m5 grey">x {{extra}}</div>
+            <div class="col s12 m1 number grey">x {{extra}}</div>
         </div>
     </div>
 </div>
